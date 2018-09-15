@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Roboto+Condensed');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: rgb(248,248,248);
+  letter-spacing: 0.5px;
+  padding: 40 50 70 50; /*Top Left Bottom Right*/
+}
+
+h1 {
+  font-size: 2em;
+  padding: 0 0 30 0; /*Top Left Bottom Right*/
+  margin: 0;
+}
+
+.graphTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card {
+  background-color: #FFF;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+/* ---------------------------- Positioning Main ScatterPlot ----------------------------  */
+.plots-container {
+  width: 70%;
+}
+
+.column {
+  float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.scatterplot {
+  margin-left: 30px;
+}
+/* ---------------------------- Hover Dot Container ----------------------------  */
+.hover-dot {
+  width: 200px;
+  font-size: 16px;
+  padding: 15 15 15 15;
+  margin-top: 30px;
+}
+
+/* ---------------------------- Key ----------------------------  */
+.key-container {
+  width: 200px;
+  font-size: 16px;
+  padding: 15 15 15 15;
+}
+
+.placeholder {
+  width: 200px;
+  font-size: 16px;
+  padding: 15 15 15 15;
+}
+
+.pos-fixed {
+  position: fixed;
+  top: 0;
+  margin-top: 20;
+}
+/*"Key:" label */
+.keyTitle {
+  font-weight: 600;
+}
+
+/*Internet usage, etc*/
+.keySect {
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+/* ---------------------------- Individual Graph ----------------------------  */
+
+.row {
+  margin-top: 30px;
+}
+
+.individSVGContainer {
+  display: inline-block;
+}
+
+.indiv-scatter {
+  margin-left: 30px;
+}
+.individSVGTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.individSVGSubtitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ---------------------------- Axis ----------------------------  */
+.axis {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.axis text {
+  fill: rgb(150,150,150);
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgb(150,150,150);
+  shape-rendering: crispEdges;
+  stroke-width: 1px;
+}
+
+.label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  fill: rgb(150,150,150);
+}
+
+.indiv-label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  fill: rgb(150,150,150);
+}
+
+/* ---------------------------- Slider ----------------------------  */
+/* Code inspired from: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/*/
+.slider-container {
+  background-color:#262626;
+  opacity: 0.5;
+  width:100%;
+  padding: 10 0 10 0; /*Top Left Bottom Right*/
+  box-shadow: 0px 1px 50px #5E5E5E;
+  position:fixed;
+  bottom:0px;
+  z-index: 10;
+  text-align: center;
+}
+
+.slider-title {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: white;
+}
+/* Remove automatic styling for slider */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 75%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 75%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Circle button */
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #778D99;
+  height: 16px;
+  width: 16px;
+  border-radius: 7px;
+  background: #E2EAEE;
+  cursor: pointer;
+  margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #778D99;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  background: #E2EAEE;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid #778D99;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  background: #E2EAEE;
+  cursor: pointer;
+}
+
+/* Track */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 75%;
+  height: 8.4px;
+  cursor: pointer;
+  background: rgb(240,240,240);
+  border-radius: 1.3px;
+  border: 0.2px solid #778D99;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgb(240,240,240);
+}
+
+input[type=range]::-moz-range-track {
+  width: 75%;
+  height: 8.4px;
+  cursor: pointer;
+  background: rgb(240,240,240);
+  border-radius: 1.3px;
+  border: 0.2px solid #778D99;
+}
+
+input[type=range]::-ms-track {
+  width: 75%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: rgb(240,240,240);
+  border: 0.2px solid #778D99;
+  border-radius: 2.6px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: rgb(240,240,240);
+}
+
+input[type=range]::-ms-fill-upper {
+  background: rgb(240,240,240);
+  border: 0.2px solid #778D99;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgb(240,240,240);
+}

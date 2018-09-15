@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  <title>Project 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="scripts/site.js"></script>
+</head>
+<body>
+  <section class="container">
+    <h1>The Effects of Urbanization Worldwide</h1>
+    <div class="clearfix">
+      <div class="column one">
+        <div class="key-container card"></div>
+        <div class="placeholder"></div>
+      </div>
+      <div class="column plots-container">
+        <svg class="scatterplot card">
+        </svg>
+        <div class="indiv-scatter-container">
+          <div class="row one"></div>
+          <div class="row two"></div
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </section>
+  <div class="slider-container">
+    <input type="range" min="1970" max="2013" value="2013" tickInterval="10" class="slider" id="timeSlider">
+    <span class="slider-title"> Time: 2013</span>
+  </div>
+
+</body>
+</html>
